@@ -4,7 +4,7 @@ Full Stack MERN App - React + Redux-Toolkit, MongoDB, Express and Node
 🟢 This application has your memories maybe travel experience or sweet experience, tell me your stories :)
 And this project is long term project, please be calm :) and i will share part part my code like at arrow-down lines, Enjoy hacking :)
 
-# Application Todo Part 1                                 # Application Todo Part 2
+# Application Todo Part 1                               
                                                                                                  
 🟢 Server Set-up                                          🟢 Search
 🟢 MongoDB Configuration                                  🟢 Pagination
