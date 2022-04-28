@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use("/users", userRouter);
 
-const MONGODB_URL= "mongodb+srv://mhndsbgyn:452452@cluster0.khrqv.mongodb.net/sweet_db?retryWrites=true&w=majority";
+const MONGODB_URL= "mongodb+srv://mhndsbgyn:452452@cluster0.khrqv.mongodb.net/sweet-memory-app?retryWrites=true&w=majority";
 
 const port = 5000;
 
