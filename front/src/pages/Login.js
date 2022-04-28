@@ -4,6 +4,7 @@ import { Button, Card, Container, Form } from "react-bootstrap";
 import {useNavigate} from "react-router-dom"
 import {useDispatch,useSelector} from "react-redux"
 import { login } from "../redux/features/authSlice"
+import { toast } from "react-toastify";
 
 const initialState = {
   email: "",
@@ -21,7 +22,7 @@ const Login = () => {
     e.preventDefault();
     console.log(email)
     if(email && password){
-      dispatch(login({formValue,navigate}))
+      dispatch(login({formValue,navigate,toast}))
     }
   };
   const onInputChange = (e) => {

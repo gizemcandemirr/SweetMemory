@@ -1,11 +1,12 @@
 import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 import * as api from "../api"
 
-export const login = createAsyncThunk("auth/login", async({formValue, navigate}) => {
+export const login = createAsyncThunk("auth/login", async({formValue, navigate, toast}) => {
 
     try {
         const response = await api.signIn(formValue);
-        navigate("/")
+        toast.success("Login Successfully");
+        navigate("/");
         return response.data;
     } catch (error) {
         console.log(error)
