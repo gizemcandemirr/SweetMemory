@@ -18,6 +18,12 @@ const Header = () => {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
+
+
+      <Nav.Link href="#home">{user?.result?._id && (
+          <h2> logged: {user?.result?.name }{ user?.result?.lastName}</h2>
+      )}</Nav.Link>
+
         <Nav.Link href="#home">Home</Nav.Link>
 
         {user?.result?._id && (
