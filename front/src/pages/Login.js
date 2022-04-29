@@ -3,8 +3,9 @@ import { Button, Card, Container, Form, Spinner } from "react-bootstrap";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../redux/features/authSlice";
+import { googleSignIn, login } from "../redux/features/authSlice";
 import { toast } from "react-toastify";
+import { GoogleLogin } from "react-google-login";
 
 const initialState = {
   email: "",
@@ -15,6 +16,7 @@ const Login = () => {
   const [formValue, setformValue] = useState(initialState);
   const { email, password } = formValue;
   const { loading, error } = useSelector((state) => ({ ...state.auth }));
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -33,7 +35,19 @@ const Login = () => {
     let { name, value } = e.target;
     setformValue({ ...formValue, [name]: value });
   };
+  const googleSuccess = (resp) => {
 
+     const email = resp?.profileObj?.email;
+     const name = resp?.profileObj?.name;
+     const token = resp?.tokenId;
+     const googleId= resp?.googleId;
+     const result ={email,name, token, googleId};
+     dispatch(googleSignIn({result, navigate, toast}))
+
+  };
+  const googleFailure = (err) => {
+    toast.error(err);
+  };
   return (
     <>
       <Container>
@@ -65,6 +79,21 @@ const Login = () => {
                 Login
               </button>
             </form>
+            <GoogleLogin
+              clientId="191541989381-nvo416ocvt7j0qnhlnbcmo2setahj3af.apps.googleusercontent.com"
+              render={(renderProps) => (
+                <button
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                >
+                  {" "}
+                  login google
+                </button>
+              )}
+              onSuccess={googleSuccess}
+              onFailure={googleFailure}
+              cookiePolicy="single_host_origin"
+            />
           </Card.Body>
         </Card>
       </Container>

@@ -3,7 +3,7 @@ import { Button, Card, Container, Form, Spinner } from "react-bootstrap";
 
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../redux/features/authSlice";
+import { register } from "../redux/features/authSlice";
 import { toast } from "react-toastify";
 
 const initialState = {
@@ -27,10 +27,14 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
-    // if (email && password) {
-    //   dispatch(login({ formValue, navigate, toast }));
-    // }
+
+     if(password !== confirmPassword){
+        return toast.error("Password should match")
+     }
+
+    if (email && password && firstName && lastName && confirmPassword) {
+      dispatch(register({ formValue, navigate, toast }));
+    }
   };
   const onInputChange = (e) => {
     let { name, value } = e.target;
