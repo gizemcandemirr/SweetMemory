@@ -6,18 +6,18 @@ And this project is long term project, please be calm :) and i will share part p
 
 # Application Todo                             
                                                                                                  
-🟢 Server Set-up  \                                        
-🟢 MongoDB Configuration   \                                       
-🟢 Folder Structure \                                             
-🟢 User Data Modeling \                                          
-🟢 Controller for SignUp    \                                     
-🟢 Adding Signup Api        \                                  
-🟢 Testing Signup in Postman   \                               
-🟢 Controller and Api for Signin   \                           
-🟢 Testing Signin in Postman \   
-🟢 Set-up React project \   
-🟢 Clean-up React project \   
-🟢 Configure MDB on client \   
+🟢 Server Set-up  \
+🟢 MongoDB Configuration \
+🟢 Folder Structure \
+🟢 User Data Modeling \
+🟢 Controller for SignUp \
+🟢 Adding Signup Api  \
+🟢 Testing Signup in Postman   \ 
+🟢 Controller and Api for Signin \  
+🟢 Testing Signin in Postman \
+🟢 Set-up React project \ 
+🟢 Clean-up React project \ 
+🟢 Configure MDB on client \ 
 🟢 Folder Structure \   
 🟢 Enable Routing \   
 🟢 Sign In Page \   
