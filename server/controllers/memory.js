@@ -1,5 +1,5 @@
 import express from "express";
-import MemoryModal from "../models/memory";
+import MemoryModal from "../models/memory.js";
 
 
 export const createMemory = async (req,res) => {
