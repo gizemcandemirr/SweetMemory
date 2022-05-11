@@ -6,7 +6,6 @@ import Register from './pages/Register'
 import AddEditMemory from './pages/AddEditMemory'
 
 
-
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from './components/Header'
@@ -37,7 +36,6 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="/addMemory" element={<AddEditMemory/>} />
         <Route path="/editMemory/:id" element={<AddEditMemory/>} />
-
 
       </Routes>
 
